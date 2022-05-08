@@ -1,0 +1,116 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 99;
+}
+.nav-menu > span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: radius 9999px;
+  background-color: #04354f;
+}
+.nav-menu > span:not(:last-child) {
+  margin-bottom: 7px;
+}
+.nav-menu,
+.nav-menu > span {
+  transition: all 0.1s ease-in-out;
+}
+.nav-menu.active {
+  transition-delay: 0.5s;
+  transform: rotate(45deg);
+}
+.nav-menu.active > span:nth-child(2) {
+  width: 0;
+}
+.nav-menu.active > span:nth-child(1),
+.nav-menu.active > span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.nav-menu.active > span:nth-child(1) {
+  transform: translateY(9px);
+}
+.nav-menu.active > span:nth-child(3) {
+  transform: translateY(-9px) rotate(90deg);
+}
+.mobile-navbar {
+  position: fixed;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ffffffe3;
+  transition: left 0.5s;
+  z-index: 3;
+}
+.mobile-navbar.active {
+  left: 0;
+}
+
+.navbar img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 0;
+}
+.nav-list:nth-child(1) {
+  margin-top: 40px;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #4c4c4c;
+}
+
+.input-container {
+  background-color: transparent;
+  border: solid 1px #ccc;
+  color: #ccc;
+  background-color: #1212122e;
+  border-radius: 5px;
+  padding: 5px;
+  display: none;
+}
+.navbar-input,
+.navbar-input-active {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  transition: 0.3s;
+}
+.navbar-input {
+  width: 0px;
+}
+.navbar-input-active {
+  width: 170px;
+}
+
+.navbar-input:hover {
+  width: 170px;
+  outline: none;
+  background-color: #1212122e;
+  color: #ffffff;
+}
+.navbar-input:active,
+.navbar-input:focus {
+  outline: none;
+}
+.nav-item a {
+  font-size: 30px;
+  color: #005e95;
+}
