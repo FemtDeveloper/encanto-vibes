@@ -21,7 +21,8 @@ p {
 }
 
 .regions-container {
-  padding: 40px 20px;
+  position: relative;
+  padding: 60px 20px;
 }
 .regions-container h1 {
   font-size: 44px;

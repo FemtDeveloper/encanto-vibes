@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import ModalImage from "../../ModalImage/ModalImage";
 
 const Mountains = () => {
+  const [sourceModalImage, setSourceModalImage] = useState(null);
+  const [isShowModal, setIsShowModal] = useState(false);
+
+  const handleModalImage = async (e) => {
+    console.log(e);
+    setSourceModalImage(await e.target.src);
+    setIsShowModal(true);
+  };
   return (
     <div className="regions-container">
+      {isShowModal && (
+        <ModalImage
+          imageSource={sourceModalImage}
+          setIsShowModal={setIsShowModal}
+        />
+      )}
       <h1>Mountains</h1>
       <section className="region-container" id="regions">
         <div
@@ -127,6 +142,7 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada1.jpg?alt=media&token=176dba2c-40a7-4210-a8ff-d61f03a9ef69"
             alt="Siera-nevada"
+            onClick={handleModalImage}
           />
           <p>
             San Andrés is the main island of the San Andres Islands, also
@@ -137,6 +153,7 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada2.jpg?alt=media&token=01811a03-55bf-4c46-a419-bce64de425db"
             alt="pueblo kogui"
+            onClick={handleModalImage}
           />
           <p>
             San Andrés has a wide variety of hotels that accommodate all kinds
@@ -145,10 +162,12 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fciudad-perdida.jpg?alt=media&token=c69e77e7-d182-4532-8e29-da55e287c297"
             alt="ciudad perdida"
+            onClick={handleModalImage}
           />
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada3.jpg?alt=media&token=430e8d82-2494-4c16-aef0-32d84072f4aa"
             alt="Sierra nevada malla"
+            onClick={handleModalImage}
           />
         </article>
         <article className="beach-info">
@@ -156,6 +175,7 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Feje-cafetero.jpg?alt=media&token=039415b1-7a91-45b0-b175-8e4bc10ae81f"
             alt="bahía"
+            onClick={handleModalImage}
           />
           <p>
             Someone once said that Santa Marta was the most beautiful bay in
@@ -168,6 +188,7 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fbalcones-casas.jpg?alt=media&token=7afc0644-9bd6-4c6e-8371-0fb2ea51628f"
             alt="FOTO NEGUANJE"
+            onClick={handleModalImage}
           />
           <p>
             Like San Andres, Santa Marta has many hotels and cabins that combine
@@ -176,10 +197,12 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffinca-cafetera.jpg?alt=media&token=548a6e17-c42e-4f56-aa1b-8c13aea59854"
             alt="Finca Cafetera"
+            onClick={handleModalImage}
           />
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffinca-hotel-rancho-san-antonio.jpg?alt=media&token=82f0afd8-7e58-46f6-94fc-b2e462cbb082"
             alt="Rancho San Antonio"
+            onClick={handleModalImage}
           />
         </article>
         <article className="beach-info">
@@ -187,6 +210,7 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpuente-de-boyaca.jpg?alt=media&token=38353851-e8ab-4cf7-bef9-72435b80404e"
             alt="Puente de Boyaca"
+            onClick={handleModalImage}
           />
           <p>
             Cartagena de Indias is also located to the north of Colombia,
@@ -199,6 +223,7 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpuente-del-espa%C3%B1ol-boyaca.jpg?alt=media&token=fd49ec64-a6db-437f-8d2e-7b5f44bd9f7a"
             alt="Puente del español boyacá"
+            onClick={handleModalImage}
           />
           <p>
             Like San Andres, Santa Marta has many hotels and cabins that combine
@@ -207,10 +232,12 @@ const Mountains = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Figuaque.jpg?alt=media&token=827aa300-3447-4ca8-a018-050d42359f01"
             alt="Laguna Iguaque"
+            onClick={handleModalImage}
           />
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fduruelo-boyac%C3%A1.jpg?alt=media&token=43943d5f-ad16-423f-8909-40aef9aab146"
             alt="Hospedería Duruelo"
+            onClick={handleModalImage}
           />
         </article>
       </section>

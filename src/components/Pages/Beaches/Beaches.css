@@ -1,8 +1,10 @@
 .beach-info img {
-  position: relative;
   width: 90%;
   height: 160px;
   margin-bottom: 25px;
   border-radius: 20px;
   box-shadow: 0 0 10px #18657cc4;
+}
+.modal-container img {
+  width: 100%;
 }

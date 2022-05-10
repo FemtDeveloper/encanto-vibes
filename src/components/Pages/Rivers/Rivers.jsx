@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import ModalImage from "../../ModalImage/ModalImage";
 
 const Rivers = () => {
+  const [sourceModalImage, setSourceModalImage] = useState(null);
+  const [isShowModal, setIsShowModal] = useState(false);
+
+  const handleModalImage = async (e) => {
+    console.log(e);
+    setSourceModalImage(await e.target.src);
+    setIsShowModal(false);
+  };
   return (
     <div className="regions-container">
+      {isShowModal && (
+        <ModalImage
+          imageSource={sourceModalImage}
+          setIsShowModal={setIsShowModal}
+        />
+      )}
       <h1>Rivers</h1>
       <section className="region-container" id="regions">
         <div
@@ -127,6 +142,7 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fcano-cristales1.jpg?alt=media&token=4aa67fe2-16c5-4b48-b820-a78423310123"
             alt="bahía"
+            onClick={handleModalImage}
           />
           <p>
             Located in the Serranía de la Macarena, also called the river of
@@ -135,6 +151,7 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpiscina-sanandres.jpg?alt=media&token=806d1a78-9cdb-4011-a656-ddb5eb7140b9"
             alt="piscina-san andres"
+            onClick={handleModalImage}
           />
           <p>
             San Andrés has a wide variety of hotels that accommodate all kinds
@@ -143,10 +160,12 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fdecameron-aquarium.jpg?alt=media&token=0d62acaf-d5de-4446-9d1c-92096e43ef45"
             alt="decameron aquarium"
+            onClick={handleModalImage}
           />
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fhotel-bahia-sardina.jpg?alt=media&token=e25186ff-be2a-4644-aa3a-0a33bb397456"
             alt="bahia sardina"
+            onClick={handleModalImage}
           />
         </article>
         <article className="beach-info">
@@ -154,6 +173,7 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsanta-marta1.jpg?alt=media&token=6101eb5c-4e62-4359-a0f8-7a1911b4dfe3"
             alt="bahía"
+            onClick={handleModalImage}
           />
           <p>
             Someone once said that Santa Marta was the most beautiful bay in
@@ -166,6 +186,7 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fneguanje.jpg?alt=media&token=caa0cbb9-11b1-4ab6-ae7d-0752d495f1f9"
             alt="FOTO NEGUANJE"
+            onClick={handleModalImage}
           />
           <p>
             Like San Andres, Santa Marta has many hotels and cabins that combine
@@ -174,10 +195,12 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fplaya-blanca.jpg?alt=media&token=c1b1d4bd-90f9-4c14-ad4a-54a536d2d085"
             alt="PLAYA BLANCA"
+            onClick={handleModalImage}
           />
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fmarriot%20santa%20marta.jpg?alt=media&token=d3411e6a-9975-41fd-b034-612c56d6f8c9"
             alt="hotel marriot santa marta"
+            onClick={handleModalImage}
           />
         </article>
         <article className="beach-info">
@@ -185,6 +208,7 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fbocagrande.jpg?alt=media&token=d029ac5b-ee1d-4991-906a-cb52ae8d29d9"
             alt="Bocagrande"
+            onClick={handleModalImage}
           />
           <p>
             Cartagena de Indias is also located to the north of Colombia,
@@ -197,6 +221,7 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fcholon.jpg?alt=media&token=e80fbc85-774c-4c20-b923-b8db82c111db"
             alt="Bocagrande"
+            onClick={handleModalImage}
           />
           <p>
             Like San Andres, Santa Marta has many hotels and cabins that combine
@@ -205,10 +230,12 @@ const Rivers = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Frio-claro.jpg?alt=media&token=60362310-724d-4dc9-8edc-bb215261c4ff"
             alt="PLAYA Barú"
+            onClick={handleModalImage}
           />
           <img
             src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fca%C3%B1on-rio-claro.jpg?alt=media&token=36e8261f-552c-451a-9af4-130dff71a443"
             alt="hotel Charleston Santa Teresa"
+            onClick={handleModalImage}
           />
         </article>
       </section>
