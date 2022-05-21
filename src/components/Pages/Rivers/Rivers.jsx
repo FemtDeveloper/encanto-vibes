@@ -136,7 +136,6 @@ const Rivers = () => {
         </div>
       </section>
       <section className="main-beaches--container">
-        <h1>Rivers</h1>
         <p>
           Thanks to its snowy peaks and its mountains, Colombia is one of the
           richest countries in the world in terms of fresh water production,
