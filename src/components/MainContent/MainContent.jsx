@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "scrollreveal";
+import ContactForm from "../ContactForm";
 import "./MainContent.css";
 
 const MainContent = () => {
@@ -11,8 +12,8 @@ const MainContent = () => {
       duration: 2500,
       reset: true,
     });
-    sr.reveal(".title-container, p, figure, h2", {
-      delay: 200,
+    sr.reveal(".title-container, p, figure, h2, .contact-container", {
+      delay: 100,
       scale: 0.8,
       // interval: 100,
       // opacity: 0.8,
@@ -33,13 +34,15 @@ const MainContent = () => {
       <hr />
       <section>
         <article className="mode">
-          <h2 id="main">Beaches</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-            numquam maxime a rem autem quibusdam qui ullam natus minima. Tenetur
-            ab aliquam quod in. Explicabo exercitationem in accusamus minima
-            fugit.
-          </p>
+          <div className="description-container">
+            <h2 id="main">Beaches</h2>
+            <p>
+              Due to its location in the extreme north of South America,
+              Colombia has coasts on the Caribbean Sea and the Pacific Ocean.
+              The most popular beaches are located in the Caribbean.
+            </p>
+          </div>
+
           <Link to="/beaches">
             <figure>
               <img
@@ -52,13 +55,15 @@ const MainContent = () => {
         </article>
         <hr />
         <article className="mode">
-          <h2 id="main">Mountains</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-            delectus. Modi, eum atque, iste aliquam accusantium adipisci vel
-            alias iure quidem pariatur inventore labore quaerat, quam autem.
-            Vitae, labore nostrum?
-          </p>
+          <div className="description-container">
+            <h2 id="main">Mountains</h2>
+            <p>
+              Likewise, the country has the completion of the Andes mountain
+              range in the north and the Sierra Nevada de Santa Marta. In its
+              mountains we can visit snow-capped mountains, moors, towns and
+              coffee plantations
+            </p>
+          </div>
           <Link to="/mountains">
             <figure>
               <img
@@ -71,13 +76,16 @@ const MainContent = () => {
         </article>
         <hr />
         <article className="mode">
-          <h2 id="main">Rivers</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            vero aliquid labore ut officiis obcaecati, enim laudantium ducimus
-            magnam qui corporis vitae eligendi commodi accusantium dicta, fugit
-            perferendis nemo dolorum?
-          </p>
+          <div className="description-container">
+            <h2 id="main">Rivers</h2>
+            <p>
+              Colombia has exceptional water wealth, six times higher than the
+              world average and three times higher than that of Latin America.
+              Our country is one of the countries in the world with the largest
+              number of ecosystems that produce water. Many of them are tourist
+              from their source to their mouth in the sea.
+            </p>
+          </div>
           <Link to="/rivers">
             <figure>
               <img
@@ -89,6 +97,16 @@ const MainContent = () => {
           </Link>
         </article>
       </section>
+      <article id={"aboutUs"}>
+        <h2>About Us</h2>
+        <p>
+          We are a non-profit organization that seeks to promote tourism in
+          Colombia, promoting local businesses and the charisma of our people.
+          We believe that tourism generates income to improve the quality of
+          life of the inhabitants of each region.
+        </p>
+      </article>
+      <ContactForm />
     </main>
   );
 };

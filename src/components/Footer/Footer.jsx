@@ -4,7 +4,18 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <footer>Footer</footer>
+      <footer>
+        <span>
+          Developed by{" "}
+          <a
+            href="https://www.mirandadeveloper.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            MirandaDeveloper®
+          </a>
+        </span>
+      </footer>
     </>
   );
 };

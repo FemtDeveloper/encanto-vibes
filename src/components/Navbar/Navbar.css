@@ -6,7 +6,7 @@
   justify-content: space-between;
   padding: 0 20px;
   z-index: 99;
-  background: #015b8bb3;
+  background: #015b8b;
   box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(1.2px);
   -webkit-backdrop-filter: blur(1.2px);
@@ -16,12 +16,20 @@
 .navbar.active {
   background-color: #06909abf;
 }
+.navbar h3 {
+  margin: 0;
+  color: #efefef;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Macondo", cursive;
+  margin-right: 15px;
+}
 .nav-menu > span {
   display: block;
-  width: 22px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   border: radius 9999px;
-  background-color: #04354f;
+  background-color: #efefef;
 }
 .nav-menu > span:not(:last-child) {
   margin-bottom: 7px;
@@ -42,10 +50,10 @@
   transition-delay: 0.4s;
 }
 .nav-menu.active > span:nth-child(1) {
-  transform: translateY(9px);
+  transform: translateY(12px);
 }
 .nav-menu.active > span:nth-child(3) {
-  transform: translateY(-9px) rotate(90deg);
+  transform: translateY(-8px) rotate(90deg);
 }
 .sidemenu {
   position: fixed;
@@ -54,8 +62,9 @@
   justify-content: center;
   width: 100%;
   border-radius: 0 0 10px 10px;
-  background-color: #ffffffe3;
+  background-color: #015b8bc2;
   transition: left 0.3s;
+  font-family: "Ubuntu", sans-serif;
   z-index: 3;
 }
 .sidemenu.active {
@@ -78,10 +87,6 @@
 }
 .nav-list:nth-child(1) {
   margin-top: 50px;
-}
-.nav-item a {
-  text-decoration: none;
-  color: #4c4c4c;
 }
 
 .input-container {
@@ -115,21 +120,50 @@
   visibility: visible;
 }
 
-.nav-item a {
-  font-size: 30px;
-  color: #005e95;
+.nav-item {
+  padding: 5px 10px;
+  transition: all 0.1s;
+}
+.nav-item.nav-link {
+  padding: 0;
 }
 .nav-list--container {
   display: none;
   align-items: center;
 }
+.dropdown .dropdown-menu-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  background-color: #4d8caeb3;
+}
+.dropdown .notShow {
+  display: none;
+}
 .nav-list--desktop {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
-  gap: 20px;
 }
-.nav-list--desktop .nav-item a {
+.nav-item a {
+  color: #efefef;
+  font-size: 30px;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 0;
+}
+.nav-item:hover {
+  border-bottom: 3px solid #efefef;
+  border-radius: 5px;
+  color: #fff707;
+}
+.nav-item .nav-link:hover {
+  color: #efefef;
+}
+.nav-item .nav-link:focus {
   color: #efefef;
 }
 
@@ -139,5 +173,8 @@
   }
   .nav-list--container {
     display: flex;
+  }
+  .navbar p {
+    display: none;
   }
 }

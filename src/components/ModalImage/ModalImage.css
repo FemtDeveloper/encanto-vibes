@@ -3,13 +3,17 @@
   flex-direction: column;
   position: fixed;
   right: 10px;
-  align-items: flex-end;
+  align-items: center;
   width: calc(100% - 20px);
   margin: 0 auto;
   z-index: 100;
 }
-
+.modal-container img {
+  width: 90%;
+}
 .modal-container span {
+  position: absolute;
+  right: 10px;
   font-size: 22px;
   color: #fff;
   background-color: #00000066;

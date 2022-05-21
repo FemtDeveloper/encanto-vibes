@@ -1,14 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import scrollreveal from "scrollreveal";
 import ModalImage from "../../ModalImage/ModalImage";
 
 const Rivers = () => {
+  useEffect(() => {
+    const sr = scrollreveal({
+      origin: "bottom",
+      distance: "80px",
+      duration: 2500,
+      reset: true,
+    });
+    sr.reveal(".title-container, p, figure, h2", {
+      delay: 200,
+      scale: 0.8,
+      // interval: 100,
+      // opacity: 0.8,
+    });
+  }, []);
   const [sourceModalImage, setSourceModalImage] = useState(null);
   const [isShowModal, setIsShowModal] = useState(false);
 
   const handleModalImage = async (e) => {
     console.log(e);
     setSourceModalImage(await e.target.src);
-    setIsShowModal(false);
+    setIsShowModal(!isShowModal);
   };
   return (
     <div className="regions-container">
@@ -60,10 +75,7 @@ const Rivers = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
+                <h3>Caño Cristales</h3>
               </div>
             </a>
             <a
@@ -78,10 +90,7 @@ const Rivers = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
+                <h3>Fin del Mundo, Putumayo</h3>
               </div>
             </a>
             <a
@@ -96,10 +105,7 @@ const Rivers = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
+                <h3>Norcasia, Quindío</h3>
               </div>
             </a>
           </div>
@@ -130,113 +136,179 @@ const Rivers = () => {
         </div>
       </section>
       <section className="main-beaches--container">
+        <h1>Rivers</h1>
         <p>
-          In colombia there are a lot of beaches in different regions; there are
-          continental beaches and beautiful islands. At the same cities you can
-          find different places where you can share with your family and
-          friends. Here we bring you what we consider the most beautiful and
-          popular
+          Thanks to its snowy peaks and its mountains, Colombia is one of the
+          richest countries in the world in terms of fresh water production,
+          waterfalls along the route showed us the beauty of its riches
         </p>
         <article className="beach-info">
-          <h2>Caño Cristales</h2>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fcano-cristales1.jpg?alt=media&token=4aa67fe2-16c5-4b48-b820-a78423310123"
-            alt="bahía"
-            onClick={handleModalImage}
-          />
-          <p>
-            Located in the Serranía de la Macarena, also called the river of
-            seven colors is one of the most beautiful rivers in Colombia
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpiscina-sanandres.jpg?alt=media&token=806d1a78-9cdb-4011-a656-ddb5eb7140b9"
-            alt="piscina-san andres"
-            onClick={handleModalImage}
-          />
-          <p>
-            San Andrés has a wide variety of hotels that accommodate all kinds
-            of budgets
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fdecameron-aquarium.jpg?alt=media&token=0d62acaf-d5de-4446-9d1c-92096e43ef45"
-            alt="decameron aquarium"
-            onClick={handleModalImage}
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fhotel-bahia-sardina.jpg?alt=media&token=e25186ff-be2a-4644-aa3a-0a33bb397456"
-            alt="bahia sardina"
-            onClick={handleModalImage}
-          />
+          <div className="description-container">
+            <div>
+              <h2>Amazonía and Eastern Plains</h2>
+              <figure>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fcano-cristales1.jpg?alt=media&token=4aa67fe2-16c5-4b48-b820-a78423310123"
+                  alt="bahía"
+                  onClick={handleModalImage}
+                />
+                <figcaption>Caño Cristales</figcaption>
+              </figure>
+            </div>
+            <p>
+              <strong>Caño Cristales</strong>, located in the Serranía de la
+              Macarena, also called the river of seven colors is one of the most
+              beautiful rivers in Colombia
+            </p>
+          </div>
+          <div className="description-container">
+            <div>
+              <p>
+                <strong>Cascada del Fin del mundo</strong>, Lacated in Mocoa,
+                Putumayo, for a long time it was a paradise forgotten by
+                Colombians due to the security situation, but once the peace
+                agreements were signed, a large number of tourist sites were
+                opened to the public that had great beauty.
+              </p>
+            </div>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffin-del-mundo-putumayo.jpg?alt=media&token=712aab4f-a95b-424b-982c-ecf2e138fab5"
+                alt="End of the world cascade"
+                onClick={handleModalImage}
+              />
+              <figcaption>End of the World, Putumayo</figcaption>
+            </figure>
+          </div>
+          <div className="description-container">
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Famazon-river.jpg?alt=media&token=523e8b2b-d471-4bf2-bf22-8263733c31f7"
+                alt="Amazon river"
+                onClick={handleModalImage}
+              />
+              <figcaption>Amazon River</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Famazon-hotel.jpg?alt=media&token=164a64f0-407c-483f-a1eb-83799e55bdc1"
+                alt="amazon-hotel"
+                onClick={handleModalImage}
+              />
+              <figcaption>Amazon Hotel, Leticia</figcaption>
+            </figure>
+          </div>
         </article>
+        <hr />
         <article className="beach-info">
-          <h2>Santa Marta</h2>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsanta-marta1.jpg?alt=media&token=6101eb5c-4e62-4359-a0f8-7a1911b4dfe3"
-            alt="bahía"
-            onClick={handleModalImage}
-          />
-          <p>
-            Someone once said that Santa Marta was the most beautiful bay in
-            America, with the imposing Sierra Nevada on one side and the
-            beautiful Caribbean Sea on the other. Santa Marta is located to the
-            north of Colombia and has many beatiful beaches such as Playa
-            Blanca, Bahía Concha, Neguanje, Taganga and El Rodadero, among
-            others.
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fneguanje.jpg?alt=media&token=caa0cbb9-11b1-4ab6-ae7d-0752d495f1f9"
-            alt="FOTO NEGUANJE"
-            onClick={handleModalImage}
-          />
-          <p>
-            Like San Andres, Santa Marta has many hotels and cabins that combine
-            comfort and nature.
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fplaya-blanca.jpg?alt=media&token=c1b1d4bd-90f9-4c14-ad4a-54a536d2d085"
-            alt="PLAYA BLANCA"
-            onClick={handleModalImage}
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fmarriot%20santa%20marta.jpg?alt=media&token=d3411e6a-9975-41fd-b034-612c56d6f8c9"
-            alt="hotel marriot santa marta"
-            onClick={handleModalImage}
-          />
+          <div className="description-container">
+            <div>
+              <h2>Region Caribe</h2>
+              <figure>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fmalecon-del-rio.jpg?alt=media&token=34a5e8c6-4748-4391-bf30-4c09c647579e"
+                  alt="Malecon del rio Barranquilla"
+                  onClick={handleModalImage}
+                />
+                <figcaption>Malecón del rio, Barranquilla</figcaption>
+              </figure>
+            </div>
+            <p>
+              <strong>The Caribbean region</strong>, north of Colombia and named
+              for having its coasts in the Caribbean Sea, is where the largest
+              river in Colombia, the Magdalena River, flows through the entire
+              country from the south to its mouth in the city of Barranquilla. .
+              You can visit the river in different sections where you will find
+              a great variety of cultures.
+            </p>
+          </div>
+          <div className="description-container">
+            <p>
+              You can find rivers that start in the Sierra Nevada de Santa Marta
+              and see the crystal clear waters and beautiful landscapes along
+              its route.
+            </p>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fmompox.jpg?alt=media&token=7587b7d0-b3d2-4625-8024-f9a3940f713e"
+                alt="Mompox"
+                onClick={handleModalImage}
+              />
+              <figcaption>Mompox, Bolivar</figcaption>
+            </figure>
+          </div>
+          <div className="description-container">
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpozo-azul.jpg?alt=media&token=72eb9705-3b61-4241-a98d-cbafa74e0a4b"
+                alt="Pozo azul "
+                onClick={handleModalImage}
+              />
+              <figcaption>Pozo Azul</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fquebrada-valencia.jpg?alt=media&token=ba151b2d-597b-41be-83ca-1c75dc66705e"
+                alt="Quebrada valencia santa marta"
+                onClick={handleModalImage}
+              />
+              <figcaption>Quebrada Valencia</figcaption>
+            </figure>
+          </div>
         </article>
+        <hr />
         <article className="beach-info">
-          <h2>Cartagena</h2>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fbocagrande.jpg?alt=media&token=d029ac5b-ee1d-4991-906a-cb52ae8d29d9"
-            alt="Bocagrande"
-            onClick={handleModalImage}
-          />
-          <p>
-            Cartagena de Indias is also located to the north of Colombia,
-            founded in June 1 of 1533, Cartagena was one of the main cities of
-            the Spanish crown on the caribbean having wonderful beaches where
-            you can spend quiet and also exciting moments. The main beaches that
-            you can visit are Playa Blanca Y Cholón, located en Barú Island, the
-            Archipelago of Rosario Islands,
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fcholon.jpg?alt=media&token=e80fbc85-774c-4c20-b923-b8db82c111db"
-            alt="Bocagrande"
-            onClick={handleModalImage}
-          />
-          <p>
-            Like San Andres, Santa Marta has many hotels and cabins that combine
-            comfort and nature.
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Frio-claro.jpg?alt=media&token=60362310-724d-4dc9-8edc-bb215261c4ff"
-            alt="PLAYA Barú"
-            onClick={handleModalImage}
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fca%C3%B1on-rio-claro.jpg?alt=media&token=36e8261f-552c-451a-9af4-130dff71a443"
-            alt="hotel Charleston Santa Teresa"
-            onClick={handleModalImage}
-          />
+          <div className="description-container">
+            <div>
+              <h2>Eje Cafetero y Antioquia</h2>
+              <figure>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Frio-verde-quindio.jpg?alt=media&token=7716ec2f-f4ff-46f2-b9e9-ee9b5fbde5b2"
+                  alt="Green River"
+                  onClick={handleModalImage}
+                />
+                <figcaption>Rio Verde, Quindío</figcaption>
+              </figure>
+            </div>
+            <p>
+              <strong> Eje Cafetero and Antioquia</strong>, is one of the
+              regions with the most rivers in Colombia, being surrounded by
+              mountains, this region offers innumerable and beautiful
+              landscapes,
+            </p>
+          </div>
+          <div className="description-container">
+            <p>
+              In this region you can find different plans such as rappelling,
+              rafting and hiking.
+            </p>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fnorcasia-1.webp?alt=media&token=f9f4b1db-6288-4d04-868b-0c4c6e8e2536"
+                alt="Norcasia"
+                onClick={handleModalImage}
+              />
+              <figcaption>Norcasia, Caldas</figcaption>
+            </figure>
+          </div>
+          <div className="description-container">
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Frio-claro.jpg?alt=media&token=60362310-724d-4dc9-8edc-bb215261c4ff"
+                alt="Río claro 1"
+                onClick={handleModalImage}
+              />
+              <figcaption>Rio Claro</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fca%C3%B1on-rio-claro.jpg?alt=media&token=36e8261f-552c-451a-9af4-130dff71a443"
+                alt="Rio Claro"
+                onClick={handleModalImage}
+              />
+              <figcaption>Rio claro</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
     </div>

@@ -8,6 +8,7 @@
   text-align: center;
   width: 100%;
 }
+
 h2 {
   font-size: 36px;
   font-weight: 600;
@@ -23,6 +24,8 @@ p {
 .regions-container {
   position: relative;
   padding: 60px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .regions-container h1 {
   font-size: 44px;

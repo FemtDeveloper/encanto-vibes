@@ -49,7 +49,7 @@ const Mountains = () => {
           </div>
           <div className="carousel-inner">
             <a
-              href="https://www.parquetayrona.com/es/"
+              href="https://www.valledelcocora.com.co/"
               className="carousel-item active"
               target="_blank"
               rel="noreferrer"
@@ -60,14 +60,11 @@ const Mountains = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
+                <h3>Valle Del Cocorá</h3>
               </div>
             </a>
             <a
-              href="https://www.larepublica.co/ocio/palomino-esta-en-el-top-10-de-los-destinos-para-2019-2797852"
+              href="https://www.parquesnacionales.gov.co/portal/es/ecoturismo/parques/region-andina/parque-nacional-natural-los-nevados/"
               className="carousel-item"
               target="_blank"
               rel="noreferrer"
@@ -78,14 +75,11 @@ const Mountains = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
+                <h3>Nevado del Ruiz</h3>
               </div>
             </a>
             <a
-              href="https://es.wikipedia.org/wiki/Pen%C3%ADnsula_de_Bar%C3%BA"
+              href="https://humedalesbogota.com/paramo-de-chingaza/"
               className="carousel-item"
               target="_blank"
               rel="noreferrer"
@@ -96,10 +90,7 @@ const Mountains = () => {
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
+                <h3>Páramo de Chingaza</h3>
               </div>
             </a>
           </div>
@@ -131,114 +122,173 @@ const Mountains = () => {
       </section>
       <section className="main-beaches--container">
         <p>
-          In colombia there are a lot of beaches in different regions; there are
-          continental beaches and beautiful islands. At the same cities you can
-          find different places where you can share with your family and
-          friends. Here we bring you what we consider the most beautiful and
-          popular
+          Colombia has ramifications of the Andes mountain range that gives us
+          different thermal floors, in them there are lagoons, paramos, river
+          sources. Also, in the north we find the Sierra Nevada de Santa Marta,
+          which has the highest mountain in Colombia.
         </p>
         <article className="beach-info">
-          <h2>Sierra Nevada de Santa Marta</h2>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada1.jpg?alt=media&token=176dba2c-40a7-4210-a8ff-d61f03a9ef69"
-            alt="Siera-nevada"
-            onClick={handleModalImage}
-          />
-          <p>
-            San Andrés is the main island of the San Andres Islands, also
-            compose of Providence and Santa Catalina. Located in the Caribbean
-            Sea, the average temperature is 28°C and its crystal clear waters
-            are perfects for make snorkeling, diving and swimming.
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada2.jpg?alt=media&token=01811a03-55bf-4c46-a419-bce64de425db"
-            alt="pueblo kogui"
-            onClick={handleModalImage}
-          />
-          <p>
-            San Andrés has a wide variety of hotels that accommodate all kinds
-            of budgets
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fciudad-perdida.jpg?alt=media&token=c69e77e7-d182-4532-8e29-da55e287c297"
-            alt="ciudad perdida"
-            onClick={handleModalImage}
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada3.jpg?alt=media&token=430e8d82-2494-4c16-aef0-32d84072f4aa"
-            alt="Sierra nevada malla"
-            onClick={handleModalImage}
-          />
+          <hr />
+          <div className="description-container">
+            <div>
+              <h2>Sierra Nevada de Santa Marta</h2>
+              <figure>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada1.jpg?alt=media&token=176dba2c-40a7-4210-a8ff-d61f03a9ef69"
+                  alt="Siera-nevada"
+                  onClick={handleModalImage}
+                />
+                <figcaption>Sierra Nevada</figcaption>
+              </figure>
+            </div>
+            <p>
+              <strong>The Sierra Nevada de Santa Marta</strong> is the highest
+              coastal mountain in the world, it has indigenous populations,
+              archaeological landscapes, different species of animals and at its
+              base it has paradisiacal beaches.
+            </p>
+          </div>
+          <div className="description-container">
+            <p>
+              You can get to Santa Marta and contact several tourist agencies
+              that will show you all the plans to do in this wonderful place.
+            </p>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada2.jpg?alt=media&token=01811a03-55bf-4c46-a419-bce64de425db"
+                alt="pueblo kogui"
+                onClick={handleModalImage}
+              />
+              <figcaption>Pueblo indígena Kogui</figcaption>
+            </figure>
+          </div>
+          <div className="description-container">
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fciudad-perdida.jpg?alt=media&token=c69e77e7-d182-4532-8e29-da55e287c297"
+                alt="ciudad perdida"
+                onClick={handleModalImage}
+              />
+              <figcaption>Ciudad Perdida</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fsierra-nevada3.jpg?alt=media&token=430e8d82-2494-4c16-aef0-32d84072f4aa"
+                alt="Sierra nevada malla"
+                onClick={handleModalImage}
+              />
+              <figcaption>Glamping Sierra Nevada</figcaption>
+            </figure>
+          </div>
         </article>
         <article className="beach-info">
-          <h2>Eje Cafetero</h2>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Feje-cafetero.jpg?alt=media&token=039415b1-7a91-45b0-b175-8e4bc10ae81f"
-            alt="bahía"
-            onClick={handleModalImage}
-          />
-          <p>
-            Someone once said that Santa Marta was the most beautiful bay in
-            America, with the imposing Sierra Nevada on one side and the
-            beautiful Caribbean Sea on the other. Santa Marta is located to the
-            north of Colombia and has many beatiful beaches such as Playa
-            Blanca, Bahía Concha, Neguanje, Taganga and El Rodadero, among
-            others.
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fbalcones-casas.jpg?alt=media&token=7afc0644-9bd6-4c6e-8371-0fb2ea51628f"
-            alt="FOTO NEGUANJE"
-            onClick={handleModalImage}
-          />
-          <p>
-            Like San Andres, Santa Marta has many hotels and cabins that combine
-            comfort and nature.
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffinca-cafetera.jpg?alt=media&token=548a6e17-c42e-4f56-aa1b-8c13aea59854"
-            alt="Finca Cafetera"
-            onClick={handleModalImage}
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffinca-hotel-rancho-san-antonio.jpg?alt=media&token=82f0afd8-7e58-46f6-94fc-b2e462cbb082"
-            alt="Rancho San Antonio"
-            onClick={handleModalImage}
-          />
+          <hr />
+          <div className="description-container">
+            <div>
+              <h2>Eje Cafetero</h2>
+              <figure>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Feje-cafetero.jpg?alt=media&token=039415b1-7a91-45b0-b175-8e4bc10ae81f"
+                  alt="bahía"
+                  onClick={handleModalImage}
+                />
+                <figcaption>Eje Cafetero</figcaption>
+              </figure>
+            </div>
+            <p>
+              Colombia is known throughout the world for its excellent coffee.
+              This is produced mainly in the departments of{" "}
+              <strong>Quindio, Risaralda, Tolima, Caldas and Huila</strong>. In
+              these places you will find farms, towns and houses that still
+              preserve their beautiful colonial architecture.
+            </p>
+          </div>
+          <div className="description-container">
+            <p>
+              You can visit farms and learn how the coffee you drink in your
+              country is produced, visit theme parks and learn a little about
+              the coffee culture, also known for its kindness.
+            </p>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fbalcones-casas.jpg?alt=media&token=7afc0644-9bd6-4c6e-8371-0fb2ea51628f"
+                alt="FOTO NEGUANJE"
+                onClick={handleModalImage}
+              />
+              <figcaption>Balcones casas típicas</figcaption>
+            </figure>
+          </div>
+          <div className="description-container">
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffinca-cafetera.jpg?alt=media&token=548a6e17-c42e-4f56-aa1b-8c13aea59854"
+                alt="Finca Cafetera"
+                onClick={handleModalImage}
+              />
+              <figcaption>Finca cafetera</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffinca-hotel-rancho-san-antonio.jpg?alt=media&token=82f0afd8-7e58-46f6-94fc-b2e462cbb082"
+                alt="Rancho San Antonio"
+                onClick={handleModalImage}
+              />
+              <figcaption>Rancho San Antonio</figcaption>
+            </figure>
+          </div>
         </article>
         <article className="beach-info">
-          <h2>Boyacá</h2>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpuente-de-boyaca.jpg?alt=media&token=38353851-e8ab-4cf7-bef9-72435b80404e"
-            alt="Puente de Boyaca"
-            onClick={handleModalImage}
-          />
-          <p>
-            Cartagena de Indias is also located to the north of Colombia,
-            founded in June 1 of 1533, Cartagena was one of the main cities of
-            the Spanish crown on the caribbean having wonderful beaches where
-            you can spend quiet and also exciting moments. The main beaches that
-            you can visit are Playa Blanca Y Cholón, located en Barú Island, the
-            Archipelago of Rosario Islands,
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpuente-del-espa%C3%B1ol-boyaca.jpg?alt=media&token=fd49ec64-a6db-437f-8d2e-7b5f44bd9f7a"
-            alt="Puente del español boyacá"
-            onClick={handleModalImage}
-          />
-          <p>
-            Like San Andres, Santa Marta has many hotels and cabins that combine
-            comfort and nature.
-          </p>
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Figuaque.jpg?alt=media&token=827aa300-3447-4ca8-a018-050d42359f01"
-            alt="Laguna Iguaque"
-            onClick={handleModalImage}
-          />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fduruelo-boyac%C3%A1.jpg?alt=media&token=43943d5f-ad16-423f-8909-40aef9aab146"
-            alt="Hospedería Duruelo"
-            onClick={handleModalImage}
-          />
+          <hr />
+          <div className="description-container">
+            <div>
+              <h2>Boyacá</h2>
+              <figure>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpuente-de-boyaca.jpg?alt=media&token=38353851-e8ab-4cf7-bef9-72435b80404e"
+                  alt="Puente de Boyaca"
+                  onClick={handleModalImage}
+                />
+                <figcaption>Puente de Boyacá</figcaption>
+              </figure>
+            </div>
+            <p>
+              <strong>Boyacá</strong>Boyaca has beautiful mountains, crops, and
+              colonial towns. It also has many monuments and historical squares
+              that remind a little of the times of the revolution.
+            </p>
+          </div>
+          <div className="description-container">
+            <p>
+              In the region there are also natural parks that have lagoons,
+              rivers and waterfalls where you can also do extreme sports.
+            </p>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpuente-del-espa%C3%B1ol-boyaca.jpg?alt=media&token=fd49ec64-a6db-437f-8d2e-7b5f44bd9f7a"
+                alt="Puente del español boyacá"
+                onClick={handleModalImage}
+              />
+              <figcaption>Puente del español</figcaption>
+            </figure>
+          </div>
+          <div className="description-container">
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Figuaque.jpg?alt=media&token=827aa300-3447-4ca8-a018-050d42359f01"
+                alt="Laguna Iguaque"
+                onClick={handleModalImage}
+              />
+              <figcaption>Laguna Iguaque</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fduruelo-boyac%C3%A1.jpg?alt=media&token=43943d5f-ad16-423f-8909-40aef9aab146"
+                alt="Hospedería Duruelo"
+                onClick={handleModalImage}
+              />
+              <figcaption>Hospedería Duruelo</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
     </div>
