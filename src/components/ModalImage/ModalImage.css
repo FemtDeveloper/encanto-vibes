@@ -1,0 +1,24 @@
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 10px;
+  align-items: center;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  z-index: 100;
+}
+.modal-container img {
+  width: 90%;
+}
+.modal-container span {
+  position: absolute;
+  right: 10px;
+  font-size: 22px;
+  color: #fff;
+  background-color: #00000066;
+  font-weight: 600;
+  width: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}

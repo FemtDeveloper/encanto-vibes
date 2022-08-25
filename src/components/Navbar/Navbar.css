@@ -1,0 +1,180 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 99;
+  background: #015b8b;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  border: 1px solid #015b8b4d;
+  transition: background 0.5s;
+}
+.navbar.active {
+  background-color: #06909abf;
+}
+.navbar h3 {
+  margin: 0;
+  color: #efefef;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Macondo", cursive;
+  margin-right: 15px;
+}
+.nav-menu > span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  border: radius 9999px;
+  background-color: #efefef;
+}
+.nav-menu > span:not(:last-child) {
+  margin-bottom: 7px;
+}
+.nav-menu,
+.nav-menu > span {
+  transition: all 0.1s ease-in-out;
+}
+.nav-menu.active {
+  transition-delay: 0.5s;
+  transform: rotate(45deg);
+}
+.nav-menu.active > span:nth-child(2) {
+  width: 0;
+}
+.nav-menu.active > span:nth-child(1),
+.nav-menu.active > span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.nav-menu.active > span:nth-child(1) {
+  transform: translateY(12px);
+}
+.nav-menu.active > span:nth-child(3) {
+  transform: translateY(-8px) rotate(90deg);
+}
+.sidemenu {
+  position: fixed;
+  left: -100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background-color: #015b8bc2;
+  transition: left 0.3s;
+  font-family: "Ubuntu", sans-serif;
+  z-index: 3;
+}
+.sidemenu.active {
+  left: 0;
+}
+
+.navbar img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 0;
+}
+.nav-list:nth-child(1) {
+  margin-top: 50px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #ccc;
+  border: solid 3px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.search-input {
+  height: 100%;
+  width: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  background: none;
+  color: #fff;
+  border: none;
+  outline: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.search-input.active {
+  width: 180px;
+  margin: 0 5px;
+  visibility: visible;
+}
+
+.nav-item {
+  padding: 5px 10px;
+  transition: all 0.1s;
+}
+.nav-item.nav-link {
+  padding: 0;
+}
+.nav-list--container {
+  display: none;
+  align-items: center;
+}
+.dropdown .dropdown-menu-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  background-color: #4d8caeb3;
+}
+.dropdown .notShow {
+  display: none;
+}
+.nav-list--desktop {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+.nav-item a {
+  color: #efefef;
+  font-size: 30px;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 0;
+}
+.nav-item:hover {
+  border-bottom: 3px solid #efefef;
+  border-radius: 5px;
+  color: #fff707;
+}
+.nav-item .nav-link:hover {
+  color: #efefef;
+}
+.nav-item .nav-link:focus {
+  color: #efefef;
+}
+
+@media screen and (min-width: 576px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav-list--container {
+    display: flex;
+  }
+  .navbar h3 {
+    display: none;
+  }
+}

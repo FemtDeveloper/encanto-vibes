@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #005e95;
+}
+p {
+  text-align: left;
+  font-weight: 600;
+  color: #005e95;
+}
+
+.regions-container {
+  position: relative;
+  padding: 60px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.regions-container h1 {
+  font-size: 44px;
+  font-weight: 600;
+  color: #005e95;
+}
+
+hr {
+  border-top: 3px solid #00395b;
+}
