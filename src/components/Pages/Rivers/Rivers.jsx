@@ -67,7 +67,7 @@ const Rivers = () => {
               href="https://www.parquetayrona.com/es/"
               className="carousel-item active"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fca%C3%B1o-cristales-1.jpg?alt=media&token=2d68d020-f48b-430f-baee-45febbea678d"
@@ -82,7 +82,7 @@ const Rivers = () => {
               href="https://www.larepublica.co/ocio/palomino-esta-en-el-top-10-de-los-destinos-para-2019-2797852"
               className="carousel-item"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ffin-del-mundo-putumayo.jpg?alt=media&token=712aab4f-a95b-424b-982c-ecf2e138fab5"
@@ -97,7 +97,7 @@ const Rivers = () => {
               href="https://es.wikipedia.org/wiki/Pen%C3%ADnsula_de_Bar%C3%BA"
               className="carousel-item"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fnorcasia-1.webp?alt=media&token=f9f4b1db-6288-4d04-868b-0c4c6e8e2536"

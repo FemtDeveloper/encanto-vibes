@@ -10,7 +10,7 @@ const Footer = () => {
           <a
             href="https://www.mirandadeveloper.com/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             MirandaDeveloper®
           </a>

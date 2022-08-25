@@ -52,7 +52,7 @@ const Mountains = () => {
               href="https://www.valledelcocora.com.co/"
               className="carousel-item active"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fcocora.webp?alt=media&token=e5cfabb1-5998-4ab3-a337-45b6f07e9c1d"
@@ -67,7 +67,7 @@ const Mountains = () => {
               href="https://www.parquesnacionales.gov.co/portal/es/ecoturismo/parques/region-andina/parque-nacional-natural-los-nevados/"
               className="carousel-item"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fnevado-ruiz.jpg?alt=media&token=d50ed52f-b6ea-4439-8bf8-41ddb5bbdd98"
@@ -82,7 +82,7 @@ const Mountains = () => {
               href="https://humedalesbogota.com/paramo-de-chingaza/"
               className="carousel-item"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fchingaza-lagunas.jpg?alt=media&token=adc5c9c0-df6c-461b-8579-3186afc85355"

@@ -54,7 +54,7 @@ const Beaches = () => {
               href="https://www.parquetayrona.com/es/"
               className="carousel-item active"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Ftayrona-main.jpg?alt=media&token=beb46cd5-9faf-487a-9a50-6004a0e978a4"
@@ -69,7 +69,7 @@ const Beaches = () => {
               href="https://colombia.travel/es/palomino"
               className="carousel-item"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fpalomino-guajira.webp?alt=media&token=274aa61b-c065-40bb-bf76-221e3789f86d"
@@ -84,7 +84,7 @@ const Beaches = () => {
               href="https://es.wikipedia.org/wiki/Pen%C3%ADnsula_de_Bar%C3%BA"
               className="carousel-item"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/my-images-ed5a3.appspot.com/o/images%2Fbar%C3%BA.jpg?alt=media&token=657fd882-d6b3-412d-b69c-3a3a030cac16"
